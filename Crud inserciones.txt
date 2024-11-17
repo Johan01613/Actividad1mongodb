@@ -1,0 +1,104 @@
+Crud ingreso equipos
+
+db.equipos.insertMany([ { nombre: "Tunja FC", municipio: "Tunja" },
+ 	{ nombre: "Duitama SC", municipio: "Duitama" }, 
+	{ nombre: "Sogamoso United", municipio: "Sogamoso" },
+ 	{ nombre: "Villa de Leyva Warriors", municipio: "Villa de Leyva" }, 
+	{ nombre: "Chiquinquirá Stars", municipio: "Chiquinquirá" }, 
+	{ nombre: "Paipa Titans", municipio: "Paipa" } 
+]);
+
+
+Crud entrenadores:
+db.entrenadores.insertMany([ 
+{ nombre: "Carlos López", edad: 45, genero: "Masculino", equipo_id: ObjectId("673a2d7d851ce0b9a3721084") }, 
+{ nombre: "Marta Fernández", edad: 38, genero: "Femenino", equipo_id: ObjectId("673a2d7d851ce0b9a3721085") }, 
+{ nombre: "Luis Pérez", edad: 50, genero: "Masculino", equipo_id: ObjectId("673a2d7d851ce0b9a3721086") }, 
+{ nombre: "Ana Gómez", edad: 42, genero: "Femenino", equipo_id: ObjectId("673a2d7d851ce0b9a3721087") }, 
+{ nombre: "Jorge Sánchez", edad: 55, genero: "Masculino", equipo_id: ObjectId("673a2d7d851ce0b9a3721088") }, 
+{ nombre: "Lucía Rodríguez", edad: 35, genero: "Femenino", equipo_id: ObjectId("673a2d7d851ce0b9a3721089") } 
+])
+
+
+Inserción jugadores
+
+Tunja
+
+db.jugadores.insertMany([
+    { nombre: "Carlos Ramírez", edad: 19, posición: "Portero", ciudad: "Tunja", entrenador: ObjectId("673a3ba9851ce0b9a37210c4"), equipo: ObjectId("673a2d7d851ce0b9a3721084") },
+    { nombre: "Juan Pérez", edad: 18, posición: "Defensa", ciudad: "Tunja", entrenador: ObjectId("673a3ba9851ce0b9a37210c4"), equipo: ObjectId("673a2d7d851ce0b9a3721084") },
+    { nombre: "Luis García", edad: 17, posición: "Centrocampista", ciudad: "Tunja", entrenador: ObjectId("673a3ba9851ce0b9a37210c4"), equipo: ObjectId("673a2d7d851ce0b9a3721084") },
+    { nombre: "David Martínez", edad: 16, posición: "Delantero", ciudad: "Tunja", entrenador: ObjectId("673a3ba9851ce0b9a37210c4"), equipo: ObjectId("673a2d7d851ce0b9a3721084") },
+    { nombre: "Fernando Díaz", edad: 19, posición: "Portero", ciudad: "Tunja", entrenador: ObjectId("673a3ba9851ce0b9a37210c4"), equipo: ObjectId("673a2d7d851ce0b9a3721084") },
+    { nombre: "José Torres", edad: 18, posición: "Defensa", ciudad: "Tunja", entrenador: ObjectId("673a3ba9851ce0b9a37210c4"), equipo: ObjectId("673a2d7d851ce0b9a3721084") },
+    { nombre: "Ricardo López", edad: 17, posición: "Centrocampista", ciudad: "Tunja", entrenador: ObjectId("673a3ba9851ce0b9a37210c4"), equipo: ObjectId("673a2d7d851ce0b9a3721084") }
+]); 
+// Jugadores para Duitama SC 
+db.jugadores.insertMany([
+    { nombre: "Andrés Pérez", edad: 19, posición: "Portero", ciudad: "Duitama", entrenador: ObjectId("673a3ba9851ce0b9a37210c5"), equipo: ObjectId("673a2d7d851ce0b9a3721085") },
+    { nombre: "Javier Martínez", edad: 18, posición: "Defensa", ciudad: "Duitama", entrenador: ObjectId("673a3ba9851ce0b9a37210c5"), equipo: ObjectId("673a2d7d851ce0b9a3721085") },
+    { nombre: "Carlos Gómez", edad: 17, posición: "Centrocampista", ciudad: "Duitama", entrenador: ObjectId("673a3ba9851ce0b9a37210c5"), equipo: ObjectId("673a2d7d851ce0b9a3721085") },
+    { nombre: "Luis Torres", edad: 16, posición: "Delantero", ciudad: "Duitama", entrenador: ObjectId("673a3ba9851ce0b9a37210c5"), equipo: ObjectId("673a2d7d851ce0b9a3721085") },
+    { nombre: "José Martínez", edad: 19, posición: "Portero", ciudad: "Duitama", entrenador: ObjectId("673a3ba9851ce0b9a37210c5"), equipo: ObjectId("673a2d7d851ce0b9a3721085") },
+    { nombre: "Raúl Gómez", edad: 18, posición: "Defensa", ciudad: "Duitama", entrenador: ObjectId("673a3ba9851ce0b9a37210c5"), equipo: ObjectId("673a2d7d851ce0b9a3721085") },
+    { nombre: "Óscar Díaz", edad: 17, posición: "Centrocampista", ciudad: "Duitama", entrenador: ObjectId("673a3ba9851ce0b9a37210c5"), equipo: ObjectId("673a2d7d851ce0b9a3721085") }
+]);
+// Jugadores para Sogamoso United 
+db.jugadores.insertMany([
+    { nombre: "Luis Pérez", edad: 19, posición: "Portero", ciudad: "Sogamoso", entrenador: ObjectId("673a3ba9851ce0b9a37210c6"), equipo: ObjectId("673a2d7d851ce0b9a3721086") },
+    { nombre: "Carlos Rodríguez", edad: 18, posición: "Defensa", ciudad: "Sogamoso", entrenador: ObjectId("673a3ba9851ce0b9a37210c6"), equipo: ObjectId("673a2d7d851ce0b9a3721086") },
+    { nombre: "Javier Ramírez", edad: 17, posición: "Centrocampista", ciudad: "Sogamoso", entrenador: ObjectId("673a3ba9851ce0b9a37210c6"), equipo: ObjectId("673a2d7d851ce0b9a3721086") },
+    { nombre: "José López", edad: 16, posición: "Delantero", ciudad: "Sogamoso", entrenador: ObjectId("673a3ba9851ce0b9a37210c6"), equipo: ObjectId("673a2d7d851ce0b9a3721086") },
+    { nombre: "Fernando Pérez", edad: 19, posición: "Portero", ciudad: "Sogamoso", entrenador: ObjectId("673a3ba9851ce0b9a37210c6"), equipo: ObjectId("673a2d7d851ce0b9a3721086") },
+    { nombre: "Ricardo Martínez", edad: 18, posición: "Defensa", ciudad: "Sogamoso", entrenador: ObjectId("673a3ba9851ce0b9a37210c6"), equipo: ObjectId("673a2d7d851ce0b9a3721086") },
+    { nombre: "Raúl Torres", edad: 17, posición: "Centrocampista", ciudad: "Sogamoso", entrenador: ObjectId("673a3ba9851ce0b9a37210c6"), equipo: ObjectId("673a2d7d851ce0b9a3721086") }
+]); 
+// Jugadores para Villa de Leyva Warriors 
+db.jugadores.insertMany([
+    { nombre: "Carlos Sánchez", edad: 19, posición: "Portero", ciudad: "Villa de Leyva", entrenador: ObjectId("673a3ba9851ce0b9a37210c7"), equipo: ObjectId("673a2d7d851ce0b9a3721087") },
+    { nombre: "Juan Martínez", edad: 18, posición: "Defensa", ciudad: "Villa de Leyva", entrenador: ObjectId("673a3ba9851ce0b9a37210c7"), equipo: ObjectId("673a2d7d851ce0b9a3721087") },
+    { nombre: "Luis Rodríguez", edad: 17, posición: "Centrocampista", ciudad: "Villa de Leyva", entrenador: ObjectId("673a3ba9851ce0b9a37210c7"), equipo: ObjectId("673a2d7d851ce0b9a3721087") },
+    { nombre: "David Torres", edad: 16, posición: "Delantero", ciudad: "Villa de Leyva", entrenador: ObjectId("673a3ba9851ce0b9a37210c7"), equipo: ObjectId("673a2d7d851ce0b9a3721087") },
+    { nombre: "José Ramírez", edad: 19, posición: "Portero", ciudad: "Villa de Leyva", entrenador: ObjectId("673a3ba9851ce0b9a37210c7"), equipo: ObjectId("673a2d7d851ce0b9a3721087") },
+    { nombre: "Ricardo Pérez", edad: 18, posición: "Defensa", ciudad: "Villa de Leyva", entrenador: ObjectId("673a3ba9851ce0b9a37210c7"), equipo: ObjectId("673a2d7d851ce0b9a3721087") },
+    { nombre: "Óscar López", edad: 17, posición: "Centrocampista", ciudad: "Villa de Leyva", entrenador: ObjectId("673a3ba9851ce0b9a37210c7"), equipo: ObjectId("673a2d7d851ce0b9a3721087") }
+]); 
+// Jugadores para Chiquinquirá Stars 
+db.jugadores.insertMany([
+    { nombre: "Carlos Pérez", edad: 19, posición: "Portero", ciudad: "Chiquinquirá", entrenador: ObjectId("673a3ba9851ce0b9a37210c8"), equipo: ObjectId("673a2d7d851ce0b9a3721088") },
+    { nombre: "Juan Gómez", edad: 18, posición: "Defensa", ciudad: "Chiquinquirá", entrenador: ObjectId("673a3ba9851ce0b9a37210c8"), equipo: ObjectId("673a2d7d851ce0b9a3721088") },
+    { nombre: "Luis Martínez", edad: 17, posición: "Centrocampista", ciudad: "Chiquinquirá", entrenador: ObjectId("673a3ba9851ce0b9a37210c8"), equipo: ObjectId("673a2d7d851ce0b9a3721088") },
+    { nombre: "David Ramírez", edad: 16, posición: "Delantero", ciudad: "Chiquinquirá", entrenador: ObjectId("673a3ba9851ce0b9a37210c8"), equipo: ObjectId("673a2d7d851ce0b9a3721088") },
+    { nombre: "José González", edad: 19, posición: "Portero", ciudad: "Chiquinquirá", entrenador: ObjectId("673a3ba9851ce0b9a37210c8"), equipo: ObjectId("673a2d7d851ce0b9a3721088") },
+    { nombre: "Ricardo López", edad: 18, posición: "Defensa", ciudad: "Chiquinquirá", entrenador: ObjectId("673a3ba9851ce0b9a37210c8"), equipo: ObjectId("673a2d7d851ce0b9a3721088") },
+    { nombre: "Óscar Rodríguez", edad: 17, posición: "Centrocampista", ciudad: "Chiquinquirá", entrenador: ObjectId("673a3ba9851ce0b9a37210c8"), equipo: ObjectId("673a2d7d851ce0b9a3721088") }
+]); 
+// Jugadores para Paipa Titans
+db.jugadores.insertMany([
+    { nombre: "Carlos Díaz", edad: 19, posición: "Portero", ciudad: "Paipa", entrenador: ObjectId("673a3ba9851ce0b9a37210c9"), equipo: ObjectId("673a2d7d851ce0b9a3721089") },
+    { nombre: "Juan Torres", edad: 18, posición: "Defensa", ciudad: "Paipa", entrenador: ObjectId("673a3ba9851ce0b9a37210c9"), equipo: ObjectId("673a2d7d851ce0b9a3721089") },
+    { nombre: "Luis Ramírez", edad: 17, posición: "Centrocampista", ciudad: "Paipa", entrenador: ObjectId("673a3ba9851ce0b9a37210c9"), equipo: ObjectId("673a2d7d851ce0b9a3721089") },
+    { nombre: "David Pérez", edad: 16, posición: "Delantero", ciudad: "Paipa", entrenador: ObjectId("673a3ba9851ce0b9a37210c9"), equipo: ObjectId("673a2d7d851ce0b9a3721089") },
+    { nombre: "José Gómez", edad: 19, posición: "Portero", ciudad: "Paipa", entrenador: ObjectId("673a3ba9851ce0b9a37210c9"), equipo: ObjectId("673a2d7d851ce0b9a3721089") },
+    { nombre: "Ricardo Martínez", edad: 18, posición: "Defensa", ciudad: "Paipa", entrenador: ObjectId("673a3ba9851ce0b9a37210c9"), equipo: ObjectId("673a2d7d851ce0b9a3721089") },
+    { nombre: "Óscar Ramírez", edad: 17, posición: "Centrocampista", ciudad: "Paipa", entrenador: ObjectId("673a3ba9851ce0b9a37210c9"), equipo: ObjectId("673a2d7d851ce0b9a3721089") }
+]);
+
+Inserción de estadios
+
+db.estadios.insertMany([ 
+{ nombreDiferente: "Tunja Capital", municipio: "Tunja" }, 
+{ nombreDiferente: "Duitama Center", municipio: "Duitama" }, 
+{ nombreDiferente: "Sogamoso City", municipio: "Sogamoso" }, 
+{ nombreDiferente: "Villa Leyva", municipio: "Villa de Leyva" }, 
+{ nombreDiferente: "Chiquinquirá Town", municipio: "Chiquinquirá" }
+ ])
+
+Inserción de árbitros
+db.árbitros.insertMany([ 
+{ nombre: "Stéphanie Frappart", país: "Francia", edad: 38 }, 
+{ nombre: "Szymon Marciniak", país: "Polonia", edad: 41 }, 
+{ nombre: "Felix Brych", país: "Alemania", edad: 47 }, 
+{ nombre: "Néstor Pitana", país: "Argentina", edad: 45 }, 
+{ nombre: "Pierluigi Collina", país: "Italia", edad: 62 } 
+])

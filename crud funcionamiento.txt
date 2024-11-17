@@ -1,0 +1,131 @@
+Almacenamiento de información de inicio de campeonato
+
+db.inicio.insertMany([
+    // Grupo A: Tunja FC vs Duitama SC
+    {
+        equipos: [
+            ObjectId("673a2d7d851ce0b9a3721084"), // Tunja FC
+            ObjectId("673a2d7d851ce0b9a3721085")  // Duitama SC
+        ],
+        goles: [2, 1],  // Resultado: Tunja FC 2 - Duitama SC 1
+        puntos: [3, 0],  // Gana Tunja FC, 3 puntos para ellos y 0 para Duitama SC
+        estadio: ObjectId("674a2d7d851ce0b9a3722001"),  // Tunja Capital
+        arbitro: ObjectId("673a2d7d851ce0b9a3722010")  // Stéphanie Frappart
+    },
+    // Grupo A: Sogamoso United vs Tunja FC
+    {
+        equipos: [
+            ObjectId("673a2d7d851ce0b9a3721086"), // Sogamoso United
+            ObjectId("673a2d7d851ce0b9a3721084")  // Tunja FC
+        ],
+        goles: [1, 1],  // Empate 1-1
+        puntos: [1, 1],  // Ambos obtienen 1 punto por el empate
+        estadio: ObjectId("674a2d7d851ce0b9a3722002"),  // Sogamoso City
+        arbitro: ObjectId("673a2d7d851ce0b9a3722011")  // Szymon Marciniak
+    },
+    // Grupo A: Duitama SC vs Sogamoso United
+    {
+        equipos: [
+            ObjectId("673a2d7d851ce0b9a3721085"), // Duitama SC
+            ObjectId("673a2d7d851ce0b9a3721086")  // Sogamoso United
+        ],
+        goles: [2, 3],  // Resultado: Duitama SC 2 - Sogamoso United 3
+        puntos: [0, 3],  // Gana Sogamoso United, 3 puntos para ellos
+        estadio: ObjectId("674a2d7d851ce0b9a3722003"),  // Duitama Center
+        arbitro: ObjectId("673a2d7d851ce0b9a3722012")  // Felix Brych
+    },
+    // Grupo B: Villa de Leyva Warriors vs Chiquinquirá Stars
+    {
+        equipos: [
+            ObjectId("673a2d7d851ce0b9a3721087"), // Villa de Leyva Warriors
+            ObjectId("673a2d7d851ce0b9a3721088")  // Chiquinquirá Stars
+        ],
+        goles: [1, 2],  // Resultado: Villa de Leyva Warriors 1 - Chiquinquirá Stars 2
+        puntos: [0, 3],  // Gana Chiquinquirá Stars
+        estadio: ObjectId("674a2d7d851ce0b9a3722004"),  // Villa Leyva
+        arbitro: ObjectId("673a2d7d851ce0b9a3722013")  // Néstor Pitana
+    },
+    // Grupo B: Paipa Titans vs Villa de Leyva Warriors
+    {
+        equipos: [
+            ObjectId("673a2d7d851ce0b9a3721089"), // Paipa Titans
+            ObjectId("673a2d7d851ce0b9a3721087")  // Villa de Leyva Warriors
+        ],
+        goles: [0, 3],  // Resultado: Paipa Titans 0 - Villa de Leyva Warriors 3
+        puntos: [0, 3],  // Gana Villa de Leyva Warriors
+        estadio: ObjectId("674a2d7d851ce0b9a3722005"),  // Chiquinquirá Town
+        arbitro: ObjectId("673a2d7d851ce0b9a3722014")  // Pierluigi Collina
+    },
+    // Grupo B: Chiquinquirá Stars vs Paipa Titans
+    {
+        equipos: [
+            ObjectId("673a2d7d851ce0b9a3721088"), // Chiquinquirá Stars
+            ObjectId("673a2d7d851ce0b9a3721089")  // Paipa Titans
+        ],
+        goles: [1, 1],  // Empate 1-1
+        puntos: [1, 1],  // Empate, ambos obtienen 1 punto
+        estadio: ObjectId("674a2d7d851ce0b9a3722006"),  // Paipa
+        arbitro: ObjectId("673a2d7d851ce0b9a3722015")  // Pierluigi Collina
+    }
+]);
+
+Almacenamiento de información de semifinal
+db.semifinal.insertMany([
+    // Semifinal 1: Sogamoso United vs Chiquinquirá Stars
+    {
+        equipos: [
+            ObjectId("673a2d7d851ce0b9a3721086"), // Sogamoso United
+            ObjectId("673a2d7d851ce0b9a3721088")  // Chiquinquirá Stars
+        ],
+        goles: [2, 1],  // Resultado: Sogamoso United 2 - Chiquinquirá Stars 1
+        puntos: [3, 0],  // Gana Sogamoso United
+        estadio: ObjectId("674a2d7d851ce0b9a3722003"),  // Duitama Center
+        arbitro: ObjectId("673a2d7d851ce0b9a3722011")  // Szymon Marciniak
+    },
+    // Semifinal 2: Villa de Leyva Warriors vs Tunja FC
+    {
+        equipos: [
+            ObjectId("673a2d7d851ce0b9a3721087"), // Villa de Leyva Warriors
+            ObjectId("673a2d7d851ce0b9a3721084")  // Tunja FC
+        ],
+        goles: [1, 1],  // Empate 1-1
+        puntos: [1, 1],  // Empate, ambos obtienen 1 punto
+        estadio: ObjectId("674a2d7d851ce0b9a3722005"),  // Chiquinquirá Town
+        arbitro: ObjectId("673a2d7d851ce0b9a3722013")  // Néstor Pitana
+    }
+]);
+
+Almacenamiento información final
+
+db.resultados_finales.insertMany([
+    // 3° puesto: Chiquinquirá Stars vs Tunja FC
+    {
+        equipos: [
+            ObjectId("673a2d7d851ce0b9a3721088"), // Chiquinquirá Stars
+            ObjectId("673a2d7d851ce0b9a3721084")  // Tunja FC
+        ],
+        puesto: [4, 3],  // Chiquinquirá Stars (4°), Tunja FC (3°)
+        resultado: "2-2 (Tunja FC gana 4-3 en penales)", // Resultado del partido
+        entrenador: [
+            ObjectId("673a3ba9851ce0b9a37210c8"), // Entrenador de Chiquinquirá Stars: Jorge Sánchez
+            ObjectId("673a3ba9851ce0b9a37210c4")  // Entrenador de Tunja FC: Carlos López
+        ],
+        arbitro: ObjectId("673a2d7d851ce0b9a3722011"),  // Árbitro: Szymon Marciniak
+        estadio: ObjectId("674a2d7d851ce0b9a3722005")  // Estadio: Chiquinquirá Town
+    },
+    // 1° puesto: Sogamoso United vs Villa de Leyva Warriors
+    {
+        equipos: [
+            ObjectId("673a2d7d851ce0b9a3721086"), // Sogamoso United
+            ObjectId("673a2d7d851ce0b9a3721087")  // Villa de Leyva Warriors
+        ],
+        puesto: [1, 2],  // Sogamoso United (1°), Villa de Leyva Warriors (2°)
+        resultado: "2-1",  // Resultado del partido
+        entrenador: [
+            ObjectId("673a3ba9851ce0b9a37210c6"), // Entrenador de Sogamoso United: Luis Pérez
+            ObjectId("673a3ba9851ce0b9a37210c7")  // Entrenador de Villa de Leyva Warriors: Ana Gómez
+        ],
+        arbitro: ObjectId("673a2d7d851ce0b9a3722013"),  // Árbitro: Néstor Pitana
+        estadio: ObjectId("674a2d7d851ce0b9a3722003")  // Estadio: Duitama Center
+    }
+]);
